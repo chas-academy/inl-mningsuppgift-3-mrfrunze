@@ -53,9 +53,9 @@ function renderCart() {
   cartList.innerHTML = "";
 
   // Loopa igenom cart och lägg till varje produkt i listan
-  for (const item of cart) {
+  for (const product of cart) {
     const li = document.createElement("li");
-    li.textContent = `${item.productName} - ${item.productPrice} kr (Antal: ${item.quantity})`;
+    li.textContent = `${product.productName} - ${product.productPrice}kr (x${product.quantity})`;
     cartList.appendChild(li);
   }
 }
